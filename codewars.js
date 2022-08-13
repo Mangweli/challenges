@@ -17,7 +17,7 @@ const sum = (maxNumber) => {
     return total;
 } 
 
-console.log(sum(-10));
+// console.log(sum(-10));
 
 // Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
 
@@ -25,3 +25,23 @@ console.log(sum(-10));
 
 // * 'abc' =>  ['ab', 'c_']
 // * 'abcdef' => ['ab', 'cd', 'ef']
+
+const splitString = (stringPairs) => {
+    console.log(stringPairs.split(''));
+    let myArr = [];
+
+    let intoPairs = str.match(/(..?)/g)
+
+    if(stringPairs.length % 2 != 0) {
+        stringPairs += '_';
+    }
+
+    for(let i = 0; i < stringPairs.length; i++) {
+        myArr.push(stringPairs.substring(i, i+2));
+        i++;
+    }
+
+    return myArr;
+} 
+
+console.log(splitString('abc'));
