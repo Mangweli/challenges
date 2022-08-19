@@ -4,7 +4,8 @@
  * const arr = [-6, 20, 8, -2, 4]
  * bubbleSort(arr) => Should return [-6, -2, 4, 8, 20]
  * 
- */const insertionSort = (arr) => {
+ */
+const insertionSort = (arr) => {
     for(let i = 1 ; i<arr.length -1; i++) {
         let valueToInsert    = arr[i];
         let sortedValueIndex = i - 1;
