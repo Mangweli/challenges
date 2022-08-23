@@ -51,4 +51,5 @@ function summation(n) {
    * 
    * 0(n) - Linear : Extra space grows as the input grows
    * 
-   * O(Logn) -Logarithmic : Grows as the input increases but not at the same rate
+   * O(Logn) -Logarithmic : Grows as the input increases but not at the same rate 
+   * */

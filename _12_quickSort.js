@@ -7,31 +7,11 @@
  */
 
 const quickSort = (arr) => {
-    let leftArr      = [];
-    let rightArr     = [];
-    let pivotElement =  arr[arr.length-1];
 
-   // console.log(arr.length-2, arr[arr.length-2]);
-
-    for(let i = 0; i < arr.length-1; i++) {
-       
-        if(arr[i] <= pivotElement) {
-            leftArr.push(arr[i]);
-        }
-
-        if(arr[i] > pivotElement) {
-            rightArr.push(arr[i]);
-        }
+    if(arr.length < 2) {
+        return arr;
     }
 
-    while(leftArr.length > 0)
-
-    console.log(leftArr, rightArr, pivotElement);
-
-    return true;
-}
-
-const splitArr = (arr) => {
     let leftArr      = [];
     let rightArr     = [];
     let pivotElement =  arr[arr.length-1];
@@ -46,8 +26,10 @@ const splitArr = (arr) => {
             rightArr.push(arr[i]);
         }
     }
-    
-    return [leftArr, rightArr];
+
+  //  console.log(leftArr, rightArr, pivotElement);
+
+    return [...quickSort(leftArr), pivotElement, ...quickSort(rightArr)];
 }
 
 console.log(quickSort([-6, 20, 8, -2, 4]));
